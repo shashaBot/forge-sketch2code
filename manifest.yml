@@ -1,0 +1,24 @@
+modules:
+  'jira:issuePanel':
+    - key: sketch2code-panel
+      function: main
+      title: Sketch2Code
+      description: Transform UI Sketches into an HTML Web Page
+  macro:
+    - key: sketch2code-macro
+      function: s2cMacro
+      title: Sketch2Code
+      description: Transform UI Sketches into an HTML Web Page
+  function:
+    - key: main
+      handler: index.run
+    - key: sync
+      handler: index.sync
+    - key: s2cMacro
+      handler: index.s2cMacro
+app:
+  id: 'ari:cloud:ecosystem::app/8df4d224-a157-437b-9ff5-90ca9b9c0e89'
+  name: Sketch2Code
+permissions:
+  scopes:
+    - 'read:confluence-content.summary'

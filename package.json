@@ -1,0 +1,23 @@
+{
+  "name": "forge-sketch2code",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "SEE LICENSE IN /LICENSE",
+  "private": true,
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/**/* || npm run --silent hook-errors",
+    "hook-errors": "echo '\\x1b[31mThe build failed because a Forge UI hook is being used incorrectly. Forge UI hooks follow the same rules as React Hooks but have their own API definitions. See the Forge documentation for details on how to use Forge UI hooks.\n' && exit 1"
+  },
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-plugin-react-hooks": "^2.1.2"
+  },
+  "dependencies": {
+    "@forge/api": "^0.1.3",
+    "@forge/ui": "^0.2.0",
+    "arraybuffer-to-buffer": "0.0.7",
+    "axios": "^0.19.2",
+    "node-fetch": "^2.6.0",
+    "qrcode-svg": "^1.1.0"
+  }
+}
